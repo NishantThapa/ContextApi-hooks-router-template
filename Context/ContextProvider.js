@@ -7,7 +7,11 @@ export function ContextProvider({ children }) {
     setloginCredits({...loginCredits,[e.target.name]:e.target.value})
  }
  const LoginCheck =()=>{
-    setloginState(true)
+    if(loginCredits.email == "user" && loginCredits.password == "user"){
+       setloginState(true)
+    }else{
+       alert("WOOOOHOOOO!!")
+    }
  }
 
     const defaultContext = {
